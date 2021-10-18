@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Handle</title>
+</head>
+<style>
+  .style-1{
+      color:red
+  }
+  .style-2{
+      color:green;
+      font-size:70px;
+  }
+</style>
+<body>
+    <h1>This is <span class="style-1">Md Hamimul Haque</span></h1>
+    <button>Click Me</button>
+</body>
+   <script>
+       const myButton = document.querySelector("button");
+       const myStyle = document.querySelector("span");
+
+       myButton.addEventListener("click",()=>{
+          if(myStyle.getAttribute("class") === "style-1"){
+            myStyle.setAttribute("class",'');
+            myStyle.setAttribute("class",'style-2');
+          }else{
+            myStyle.setAttribute("class",'');
+            myStyle.setAttribute("class",'style-1');
+          }
+       })
+   </script>
+</html>
