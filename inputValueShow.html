@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input value show & some restriction</title>
+</head>
+<body>
+   <input type="text" placeholder='Input Your Value' id="myInput" oninput="myChangeValue()">
+   <p id="myParagraph"></p>
+   <p id="mySecondParagraph"></p>
+</body>
+
+<script>
+    const p =document.getElementById("myParagraph");
+    const p2 =document.getElementById("mySecondParagraph");
+    const myInput = document.getElementById("myInput");
+    const myChangeValue =()=>{
+    const myInputValue = document.getElementById("myInput").value;
+// letter count & limited letter >>> after crossing limit your input box will'be disable 
+    if(myInputValue.length <= 100){
+        p.innerHTML = `Your total letter : ${myInputValue.length}`;
+    }else{
+        p.innerHTML = `Your total letter number is greater than 100`;
+        p.style.color="red";  
+        myInput.disabled = true;   
+    }
+// word count & limited letter >>> after crossing limit your input box will'be disable 
+    if(myInputValue.match(/(\w+)/g).length <= 20 ){
+        p2.innerHTML = `Your total Word : ${myInputValue.match(/(\w+)/g).length}`;
+    }else{
+        p2.innerHTML = `Your total Word number is greater than 20`;
+        p2.style.color="red";
+        myInput.disabled = true;
+    }
+    
+  }
+
+</script>
+</html>
