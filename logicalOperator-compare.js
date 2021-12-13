@@ -30,4 +30,40 @@ console.log(result1); //----------- false (not operator use )
 console.log(!result1); //----------- false (not operator use )
 
 
+//------------OR Operator---------------------
+console.log("OR", undefined || null); // null
+console.log(undefined ||  0); // 0
+console.log( null || 0); // 0
+console.log(undefined || null || 0); // 0
+//---------------------------------
+console.log(undefined ||  1); // 1
+console.log( null || 1); // 1
+console.log(undefined || null || 1); // 1
+//------------------------------
+console.log( null || 0 || 1); // 1
+console.log( '' || "" || "Hamim"); // hamim
+console.log( null || 2 || undefined); // 2
+
+//  ------------------ AND Operator --------------
+
+console.log("AND", 1 && 0); // 0
+console.log(null && 5); // null
+console.log(0 && "Hamim");  // 0
+console.log(1 && 2 && null && 3);  // null
+console.log(1 && 2 && 3 );  // 3
+
+
+//  ------------------ NOT Operator --------------
+console.log("NOT", !true );  // false
+console.log( !0 );  // true
+console.log( !null );  // true
+//-----( !!  used for converting something  to boolean type)
+console.log( !!null );  // false
+console.log( !!false );  // false
+console.log( !!true );  // true
+console.log( !!"Hamim" );  // true
+
+
+
+
 
