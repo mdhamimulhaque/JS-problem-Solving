@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addeventListener</title>
+</head>
+<body>
+    <div class="box">
+        <h2>My list</h2>
+        <ul id="parents">
+            <li class="child">My list-1</li>
+            <li class="child">My list-2</li>
+            <li class="child">My list-3</li>
+            <li class="child">My list-4</li>
+            <li class="child">My list-5</li>
+        </ul>
+
+    <button id="addButton">Add Items</button>
+    </div>
+    <script>
+
+  //================== you can remove all items even add  new items ================================
+        document.getElementById("addButton").addEventListener("click",function(event){
+            let myParent = document.getElementById("parents");
+            let newElement = document.createElement("li");
+            newElement.innerText = "My new list item";
+            myParent.appendChild(newElement);     
+        })
+    // remove all item including new added number(for removing all items >>> for this you have to select their parents)
+        document.getElementById("parents").addEventListener("click",function(event){
+             event.target.parentNode.removeChild(event.target);
+        })
+
+
+        //  ==================== if you use it it only remove old added item ============================ 
+
+        //  let myChild = document.getElementsByClassName("child");
+
+        //  for (let i = 0; i < myChild.length; i++) {
+        //      const myList = myChild[i];
+        //      myList.addEventListener("click",function(event){
+        //      event.target.parentNode.removeChild(event.target)
+        //      })
+             
+        //  }
+
+
+
+        
+
+        
+       
+        
+       
+    </script>
+</body>
+</html>

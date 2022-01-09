@@ -7,7 +7,6 @@ for(var i = 1; i <= 100; i++){
 console.log(sum);
 
 // ================== 2nd way =====
-
 var num = 100;
 var res = (num * (num+1))/2;
 console.log(res)
