@@ -7,15 +7,15 @@
  // 1234  - 4st
  // 12345 - 5st
 
-// for(i=1; i<=5; i++){
-//     let num = "";
-//      for(j=1; j<=i; j++){
-//         //  console.log(j);
-//         num += j + " ";
-//      }
-//     console.log(num); 
+for(i=1; i<=5; i++){
+    let num = "";
+     for(j=1; j<=i; j++){
+        //  console.log(j);
+        num += j + " ";
+     }
+    console.log(num); 
 
-//  }
+ }
 
 //=======================================
 //------------- print (*)
