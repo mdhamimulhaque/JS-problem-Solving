@@ -3,7 +3,7 @@
 
 const triangleCalculator = (base, height) => {
 
-    let trisngleArea = .5 * (base * height);
+    let trisngleArea = (base * height) / 2;
     console.log(trisngleArea);
 }
 
