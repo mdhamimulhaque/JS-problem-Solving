@@ -1,3 +1,4 @@
+// ---------> with function
 const maxMinFun = (arr) => {
     const arrLength = arr.length - 1;
 
@@ -28,7 +29,7 @@ console.log(res);
 
 //=======================================================================================
 
-
+// --------->  without Function
 
 var numbers = [10, 20, 70, 40, 50];
 
